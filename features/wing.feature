@@ -1,3 +1,4 @@
+@test
 Feature: Wing Calculations Feature
   In order to ensure proper lift and stability measurements
   As a Paper Airplane Designer

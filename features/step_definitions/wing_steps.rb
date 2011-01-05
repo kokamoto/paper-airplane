@@ -1,32 +1,34 @@
+require 'lib/paper_wing'
+
 Given /^the Wing is Rectangular$/ do
-  pending # express the regexp above with the code you wish you had
+  @wing = StandardWing.new()
 end
 
 Given /^the Wing is Tapered$/ do
-  pending # express the regexp above with the code you wish you had
+  @wing = StandardWing.new()
 end
 
-Given /^has a Span of (\d+)cm$/ do |arg1|
-  pending # express the regexp above with the code you wish you had
+Given /^has a Span of (\d+)cm$/ do |span|
+  @wing.span = span
 end
 
-Given /^a Root Chord of (\d+)cm$/ do |arg1|
-  pending # express the regexp above with the code you wish you had
+Given /^a Root Chord of (\d+)cm$/ do |root_chord|
+  @wing.root_chord = root_chord
 end
 
-Given /^a Tip Chord of (\d+)cm$/ do |arg1|
-  pending # express the regexp above with the code you wish you had
+Given /^a Tip Chord of (\d+)cm$/ do |tip_chord|
+  @wing.tip_chord = tip_chord
 end
 
 When /^the wing parameters are set$/ do
+  # do nothing
+end
+
+Then /^the Wing Area should be (\d+) cm$/ do |area|
   pending # express the regexp above with the code you wish you had
 end
 
-Then /^the Wing Area should be (\d+) cm(\d+)$/ do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
-end
-
-Then /^the Wing Aspect Ratio should be (\d+)\.(\d+)$/ do |arg1, arg2|
+Then /^the Wing Aspect Ratio should be (\d+)$/ do |ar|
   pending # express the regexp above with the code you wish you had
 end
 
