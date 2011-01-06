@@ -4,7 +4,7 @@ Feature: Wing Calculations Feature
   As a Paper Airplane Designer
   I want to be able to test the calculation of wing attributes
 
-  Scenario: Rectangular Wing Scenario
+ Scenario: Rectangular Wing Scenario
     Given the Wing is Rectangular 
     And has a Span of 15cm
     And a Root Chord of 4cm

@@ -24,8 +24,8 @@ When /^the wing parameters are set$/ do
   # do nothing
 end
 
-Then /^the Wing Area should be (\d+) cm$/ do |area|
-  pending # express the regexp above with the code you wish you had
+Then /^the Wing Area should be (\d+) cm2$/ do |area|
+  area.should == @wing.area
 end
 
 Then /^the Wing Aspect Ratio should be (\d+)$/ do |ar|
