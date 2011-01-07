@@ -1,19 +1,13 @@
+require 'lib/point'
 require 'lib/shape'
+require 'lib/polygon'
 
-Given /^the Shape is a Rectangle$/ do
-  # pending # express the regexp above with the code you wish you had
+Given /^the Shape is a Rectangle of Width (\d+\.?\d*) cm and Height (\d+\.?\d*) cm$/ do |width,height|
+  @shape = PaperAirplaneGeom::Rectangle.new(width.to_f,height.to_f)
 end
 
-Given /^the Shape is an Ellipse$/ do
-  # pending # express the regexp above with the code you wish you had
-end
-
-Given /^has a Width of (\d+\.?\d*) cm$/ do |width|
-  @width = width.to_f
-end
-
-Given /^has a Height of (\d+\.?\d*) cm$/ do |height|
-  @height = height.to_f
+Given /^the Shape is an Ellipse of Width (\d+\.?\d*) cm and Height (\d+\.?\d*) cm$/ do |width,height|
+  @shape = PaperAirplaneGeom::Ellipse.new(width.to_f,height.to_f)
 end
 
 Given /^the Shape is a Polygon with verticies at \((\d+),(\d+)\), \((\d+),(\d+)\), \((\d+),(\d+)\), \((\d+),(\d+)\)$/ do |arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8|
@@ -25,6 +19,6 @@ When /^area is requested$/ do
 end
 
 Then /^the Area should be (\d+\.?\d*) cm2$/ do |area|
-  area.to_f.should == @width * @height
+  area.to_f.should == @shape.area
 end
 
